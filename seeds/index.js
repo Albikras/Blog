@@ -15,3 +15,4 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+// do i need a default post?
