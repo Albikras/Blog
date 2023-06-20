@@ -1,18 +1,23 @@
 const sequelize = require("../config/connection");
-const { User } = require("../models");
+const { User, Post, Comment } = require("../models");
 
 const userData = require("./postData.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
-
-  await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  try {
+    await User.bulkCreate(userData, {
+      individualHooks: true,
+      returning: true,
+    });
+    await Post.bulkCreate();
+    await Comment.bulkCreate();
+    console.log("Seeded Successfully!");
+  } catch (err) {
+    console.error(err);
+  }
 
   process.exit(0);
 };
 
 seedDatabase();
-// do i need a default post?

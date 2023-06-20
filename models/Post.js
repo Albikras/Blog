@@ -15,34 +15,30 @@ Post.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "User",
+        model: "user",
         key: "id",
       },
     },
-    user: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: false
     },
     date: {
-      type: DataTypes.STRING,
+      type: DataTypes.DATE,
       allowNull: false,
-    },
-    comment: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
   },
   {
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
-    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "user",
+    modelName: "post",
   }
 );
+module.exports = Post;

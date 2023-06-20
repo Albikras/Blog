@@ -1,19 +1,43 @@
-<h2>Login</h2>
-<form>
-    <div>
-        <label>email:</label>
-        <input type="text" id="login">
-    </div>
-    <div>
-        <label for="passwordLogin">password:</label>
-        <input type="password" id="password">
-    </div>
-    <div>
-        <button type="submit">submit</button>
-    </div>
-    <div>
-        <button type="click">sign up</button>
-    </div>
-</form>
+{{! login handlebars page }}
+<div class="row">
+  <div class="col-md-6">
+    <h2>Login</h2>
 
-<script src="/js/login.js"></script>
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">email:</label>
+        <input class="form-input input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">password:</label>
+        <input class="form-input input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary input" type="submit">login</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h2>Signup</h2>
+
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="username-signup">Username</label>
+        <input class="form-input input" type="text" id="username-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary input" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="./js/login.js"></script>
