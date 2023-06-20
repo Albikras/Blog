@@ -4,16 +4,18 @@ const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    const postData = await Post.findAll({
-      include: [{ model: User, include: [{ model: Comment }] }],
-    });
+    const postData = await Post.findAll();
+
     const posting = postData.map((msg) => msg.get({ plain: true }));
+
     console.log("posting:", posting);
-    await res.render("homepage", {
+
+    res.render("homepage", {
       posting,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
-    res.status(500).json({ message: "error not logged in", error: err });
+    res.status(500).json({ message: "cringe", error: err });
   }
 });
 

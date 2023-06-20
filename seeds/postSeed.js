@@ -6,4 +6,4 @@ const postData = [
   },
 ];
 
-module.exports = 
+module.exports = postData;
