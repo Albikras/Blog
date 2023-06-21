@@ -1,11 +1,15 @@
-{{#each dash as |dash|}}
-  <div class="card">
+<div class="card deleting">
+  {{#each dash as |dash|}}
     <div class="card-body">
       <h5>{{dash.title}}</h5>
       <h5>{{dash.date}}</h5>
+      <button
+        class="btn btn-sm btn-danger"
+        data-id="{{dash.id}}"
+      >Delete</button>
     </div>
-  </div>
-{{/each}}
+  {{/each}}
+</div>
 <div class="card">
   <h5 class="card-header">Create New Post</h5>
   <div class="card-body">

@@ -20,3 +20,21 @@ const sumbitReview = async (event) => {
 };
 
 document.querySelector(".submitPost").addEventListener("submit", sumbitReview);
+
+const delBtn = async (event) => {
+  if (event.target.hasAttribute("data-id")) {
+    const id = event.target.getAttribute("data-id");
+
+    const response = await fetch(`/api/post/${id}`, {
+      method: "DELETE",
+    });
+
+    if (response.ok) {
+      document.location.replace("/dashboard");
+    } else {
+      alert("failed to delete");
+    }
+  }
+};
+
+document.querySelector(".deleting").addEventListener("click", delBtn);
