@@ -1,0 +1,13 @@
+<div class="card w-100 mb-3 deleting">
+  {{#each posting as |post|}}
+    <a href="/post/{{post.id}}" class="fixtag"><div class="card-body">
+        <h5 class="card-title">{{post.title}}</h5>
+        <h5 class="card-title">{{post.date}}</h5>
+        <h5 class="card-title">{{post.user.email}}</h5>
+        <p class="card-text">{{post.content}}</p>
+      </div></a>
+    <button class="btn btn-sm btn-danger" data-id="{{post.id}}">Delete</button>
+  {{/each}}
+</div>
+
+<script src="/js/home.js"></script>

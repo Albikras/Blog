@@ -21,7 +21,7 @@ const port = process.env.PORT || 3001; //the port for it to listen too
 const sess = {
   secret: "Super secret secret",
   cookie: {
-    maxAge: 300000,
+    maxAge: 30000000000000000000000000000,
     httpOnly: true,
     secure: false,
     sameSite: "strict",

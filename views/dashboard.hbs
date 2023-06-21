@@ -1,0 +1,22 @@
+{{#each dash as |dash|}}
+  <div class="card">
+    <div class="card-body">
+      <h5>{{dash.title}}</h5>
+      <h5>{{dash.date}}</h5>
+    </div>
+  </div>
+{{/each}}
+<div class="card">
+  <h5 class="card-header">Create New Post</h5>
+  <div class="card-body">
+    <form class="submitPost">
+      <h5 class="card-title">Title</h5>
+      <textarea name="title" id="title" cols="140" rows="2"></textarea>
+      <h5 class="card-title">Content</h5>
+      <textarea name="content" id="content" cols="140" rows="10"></textarea>
+      <button class="btn btn-primary">Post</button>
+    </form>
+  </div>
+</div>
+
+<script src="/js/post.js"></script>

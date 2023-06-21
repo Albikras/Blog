@@ -5,3 +5,5 @@ const commentSeed = [
     user_id: 1,
   },
 ];
+
+module.exports = commentSeed;

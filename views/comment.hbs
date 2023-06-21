@@ -1,0 +1,25 @@
+<div class="card w-100 mb-3">
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <h5 class="card-title">{{post.date}}</h5>
+    <p class="card-text">{{post.content}}</p>
+  </div>
+</div>
+<div class="card w-100 mb-3">
+  {{#each comment as |com|}}
+    <div class="card-body">
+      <h5 class="card-title">Comments</h5>
+      <p class="card-text">{{com.message}}</p>
+    </div>
+  {{/each}}
+</div>
+{{#if logged_in}}
+  <form class="d-flex flex-column submitComment">
+    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+    <button type="submit">add Comment</button>
+  </form>
+{{else}}
+  <a href="/login" class="btn btn-primary">Login to add a comment</a>
+{{/if}}
+
+<script src="/js/comment.js"></script>

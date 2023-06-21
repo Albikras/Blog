@@ -4,3 +4,10 @@ body {
 nav {
   background-color: green;
 }
+.fixtag {
+  text-decoration: none;
+  color: black;
+}
+.hide {
+  display: none;
+}
