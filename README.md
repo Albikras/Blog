@@ -25,7 +25,11 @@ nodemon: "^2.0.22"
 
 ## Usage
 
-![test](test)
+![create post](test)
+![comment on psot](test)
+![delete post](test)
+![edit post](test)
+![login/sign up](test)
 
 ## License
 
@@ -43,8 +47,12 @@ If you want to reach me with additional question click my email link here: Krasn
 
 ## Links
 
-Heroku: 
+Heroku:
 
 ## Screenshot
 
-![test](test)
+![Homepage](test)
+![Dashboard](test)
+![login/signup](test)
+![comment](test)
+![edit](test)
