@@ -3,11 +3,13 @@
     <div class="card-body">
       <h5>{{dash.title}}</h5>
       <h5>{{dash.date}}</h5>
+      <p>{{dash.content}}</p>
       <button
         class="btn btn-sm btn-danger"
         data-id="{{dash.id}}"
       >Delete</button>
     </div>
+    <a href="/{{dash.id}}" class="btn btn-sm btn-info">Edit</a>
   {{/each}}
 </div>
 <div class="card">

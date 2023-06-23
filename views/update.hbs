@@ -1,0 +1,28 @@
+<div class="card">
+  <h5 class="card-header">Update Post</h5>
+  <div class="card-body">
+    <form class="submitUpdate">
+      <h5 class="card-title">Edit Title</h5>
+      <textarea
+        name="title"
+        id="title"
+        cols="140"
+        rows="2"
+      >{{post.title}}</textarea>
+      <h5 class="card-title">Edit Content</h5>
+      <textarea
+        name="content"
+        id="content"
+        cols="140"
+        rows="10"
+      >{{post.content}}</textarea>
+      <button
+        type="click"
+        class="btn btn-primary update"
+        data-id="{{post.id}}"
+      >Update</button>
+    </form>
+  </div>
+</div>
+
+<script src="/js/update.js"></script>

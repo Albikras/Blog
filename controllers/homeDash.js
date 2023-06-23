@@ -21,15 +21,18 @@ router.get("/", async (req, res) => {
 
 router.get("/dashboard", async (req, res) => {
   try {
-    const dashData = await Post.findAll();
+    const dashData = await User.findByPk(req.session.user_id, {
+      include: [{ model: Post }],
+    });
 
-    const dash = dashData.map((msg) => msg.get({ plain: true }));
-
-    console.log("dash:", dash);
+    const dashes = dashData.get({ plain: true });
+    const dash = dashes.posts;
+    console.log(dash);
     res.render("dashboard", {
       dash,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json({ message: "error not logged in", error: err });
   }
 });
@@ -63,6 +66,24 @@ router.get("/login", async (req, res) => {
     await res.render("login");
   } catch (err) {
     res.status(500).json({ message: "error not logged in", error: err });
+  }
+});
+
+router.get("/:id", async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [{ model: User }, { model: Comment, include: { model: User } }],
+    });
+    const post = postData.get({ plain: true });
+    console.log("post:", post);
+
+    res.render("update", {
+      post,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: "whatever", error: err });
   }
 });
 

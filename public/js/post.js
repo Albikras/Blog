@@ -38,3 +38,4 @@ const delBtn = async (event) => {
 };
 
 document.querySelector(".deleting").addEventListener("click", delBtn);
+
