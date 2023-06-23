@@ -25,11 +25,11 @@ nodemon: "^2.0.22"
 
 ## Usage
 
-![create post](test)
-![comment on psot](test)
-![delete post](test)
-![edit post](test)
-![login/sign up](test)
+![create post](./images/createinbulk.png)
+![comment on psot](./images/techcommentworking.png)
+![delete post](./images/deletetech.png)
+![edit post](./images/edit%20page.png)
+![login/sign up](./images/logininworking.png)
 
 ## License
 
@@ -47,12 +47,12 @@ If you want to reach me with additional question click my email link here: Krasn
 
 ## Links
 
-Heroku:
+Heroku: https://blogtech1287-5a4305b591eb.herokuapp.com
 
 ## Screenshot
 
-![Homepage](test)
-![Dashboard](test)
-![login/signup](test)
-![comment](test)
-![edit](test)
+![Homepage](./images/techHome.png)
+![Dashboard](./images/techDash.png)
+![login/signup](./images/logininworking.png)
+![comment](./images/commenttech.png)
+![edit](./images/edit%20page.png)
